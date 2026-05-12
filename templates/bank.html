@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banking Redaction</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #f4f6f9;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #1e3a8a;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* MAIN */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* UPLOAD BOX */
+        .upload-box {
+            border: 2px dashed #3b82f6;
+            padding: 30px;
+            border-radius: 10px;
+            background: #f0f6ff;
+            cursor: pointer;
+        }
+
+        .upload-box:hover {
+            background: #e0ecff;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 20px;
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #2563eb;
+        }
+
+        /* INFO PANEL */
+        .info {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 14px;
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .info h4 {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>🏦 Banking Redaction Module</div>
+    <a href="/">⬅ Back</a>
+</div>
+
+<!-- MAIN CARD -->
+<div class="container">
+    <div class="card">
+
+        <div class="title">Secure Banking Document Processing</div>
+        <div class="subtitle">Mask sensitive banking data before sharing</div>
+
+        <form action="/upload/bank" method="post" enctype="multipart/form-data">
+
+            <label class="upload-box">
+                📂 Click or Drag Bank Document Here
+                <input type="file" name="file" required>
+            </label>
+
+            <button class="btn" type="submit">Process & Secure</button>
+
+        </form>
+
+        <!-- INFO -->
+        <div class="info">
+            <h4>🔒 What will be protected:</h4>
+            • Account Number<br>
+            • IFSC Code<br>
+            • Aadhaar Number<br>
+            • Phone Number<br>
+            • Email ID
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Corporate Redaction</title>
+
+    <style>
+        body { margin:0; font-family:"Segoe UI"; background:#f4f6f9; }
+
+        .navbar {
+            background:#374151;
+            color:white;
+            padding:15px 30px;
+            display:flex;
+            justify-content:space-between;
+        }
+
+        .navbar a { color:white; text-decoration:none; }
+
+        .container {
+            display:flex;
+            justify-content:center;
+            margin-top:40px;
+        }
+
+        .card {
+            background:white;
+            width:500px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+            text-align:center;
+        }
+
+        .upload-box {
+            border:2px dashed #6b7280;
+            padding:30px;
+            border-radius:10px;
+            background:#f9fafb;
+            cursor:pointer;
+        }
+
+        input[type=file] { display:none; }
+
+        .btn {
+            margin-top:20px;
+            background:#374151;
+            color:white;
+            padding:12px 25px;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        .btn:hover { background:#4b5563; }
+
+        .info {
+            margin-top:20px;
+            text-align:left;
+            font-size:14px;
+            background:#f9fafb;
+            padding:15px;
+            border-radius:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navbar">
+    <div>🏢 Corporate Redaction Module</div>
+    <a href="/">⬅ Back</a>
+</div>
+
+<div class="container">
+    <div class="card">
+
+        <h2>Corporate Document Security</h2>
+        <p style="color:gray;">Protect business confidential data</p>
+
+        <form action="/upload/corporate" method="post" enctype="multipart/form-data">
+
+            <label class="upload-box">
+                📂 Upload Corporate Documents
+                <input type="file" name="file" required>
+            </label>
+
+            <button class="btn">Process Securely</button>
+
+        </form>
+
+        <div class="info">
+            <h4>🔒 Protected Data:</h4>
+            • Employee Names<br>
+            • Salary Details<br>
+            • Emails<br>
+            • Phone Numbers<br>
+            • Internal IDs<br>
+            • Company Secrets
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

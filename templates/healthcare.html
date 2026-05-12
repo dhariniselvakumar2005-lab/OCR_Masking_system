@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthcare Redaction</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #f4f6f9;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: #0f766e;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        /* MAIN */
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: white;
+            width: 500px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* UPLOAD BOX */
+        .upload-box {
+            border: 2px dashed #14b8a6;
+            padding: 30px;
+            border-radius: 10px;
+            background: #ecfdf5;
+            cursor: pointer;
+        }
+
+        .upload-box:hover {
+            background: #d1fae5;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 20px;
+            background: #0f766e;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #14b8a6;
+        }
+
+        /* INFO PANEL */
+        .info {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 14px;
+            background: #f9fafb;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .info h4 {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div>🏥 Healthcare Redaction Module</div>
+    <a href="/">⬅ Back</a>
+</div>
+
+<!-- MAIN CARD -->
+<div class="container">
+    <div class="card">
+
+        <div class="title">Secure Medical Document Processing</div>
+        <div class="subtitle">Protect patient data before sharing reports</div>
+
+        <form action="/upload/healthcare" method="post" enctype="multipart/form-data">
+
+            <label class="upload-box">
+                🧾 Click or Drag Medical Report Here
+                <input type="file" name="file" required>
+            </label>
+
+            <button class="btn" type="submit">Process & Secure</button>
+
+        </form>
+
+        <!-- INFO -->
+        <div class="info">
+            <h4>🔒 What will be protected:</h4>
+            • Patient Name<br>
+            • Phone Number<br>
+            • Email ID<br>
+            • Address<br>
+            • Doctor Name<br>
+            • Hospital Name<br>
+            • Sensitive Diagnoses
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
